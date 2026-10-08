@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 법률 길잡이</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="app" id="app">
+
+  <!-- 왼쪽: 대화 목록 -->
+  <aside class="sidebar" id="sidebar" aria-label="대화 목록">
+    <div class="brand">
+      <svg class="brand-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 12c-4-3.2-9-4.4-14-4v28c5-.4 10 .8 14 4m0-28c4-3.2 9-4.4 14-4v28c-5-.4-10 .8-14 4m0-28v28" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div>
+        <div class="brand-name">AI 법률 길잡이</div>
+        <div class="brand-sub">AI 기본법 근거 기반 Q&amp;A</div>
+      </div>
+    </div>
+    <button class="new-chat" id="newChat" type="button"><span aria-hidden="true">+</span> 새 대화</button>
+    <h2 class="side-title">최근 대화</h2>
+    <ul class="chat-list" id="chatList"></ul>
+  </aside>
+
+  <!-- 가운데: 채팅 -->
+  <main class="main">
+    <header class="main-head">
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="대화 목록 열기">☰</button>
+      <h1>AI 기본법 상담</h1>
+      <span class="pill">법률 문서 기반</span>
+    </header>
+
+    <div class="messages" id="messages" role="log" aria-live="polite"></div>
+
+    <div class="composer-wrap">
+      <div class="chips" id="chips"></div>
+      <form class="composer" id="composer" autocomplete="off">
+        <button class="attach" type="button" disabled aria-disabled="true" title="준비 중인 기능이에요" aria-label="첨부 (준비 중)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5l-8.6 8.6a5 5 0 01-7.1-7.1l8.9-8.9a3.3 3.3 0 014.7 4.7l-8.9 8.9a1.7 1.7 0 01-2.4-2.4l8.2-8.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <input id="input" type="text" placeholder="AI 기본법에 대해 질문해보세요" maxlength="500" aria-label="질문 입력">
+        <button class="send" id="send" type="submit" aria-label="보내기">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 11.2l16-7.2a.6.6 0 01.8.8l-7.2 16a.6.6 0 01-1.1-.1l-2.1-6-6-2.1a.6.6 0 01-.1-1.1z" fill="currentColor"/></svg>
+        </button>
+      </form>
+      <p class="foot-note"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 11v5M12 8v.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> 답변의 근거 조문을 함께 확인하세요.</p>
+    </div>
+  </main>
+
+  <!-- 오른쪽: 근거 문서 -->
+  <aside class="panel" id="panel" aria-label="근거 문서">
+    <div class="panel-head">
+      <h2>근거 문서</h2>
+      <button class="panel-close" id="panelClose" type="button" aria-label="근거 문서 닫기">✕</button>
+    </div>
+    <div class="panel-card" id="panelBody"></div>
+  </aside>
+</div>
+<div class="scrim" id="scrim" hidden></div>
+<script src="/static/app.js"></script>
+</body>
+</html>
