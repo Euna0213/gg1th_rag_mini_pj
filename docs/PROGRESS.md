@@ -226,6 +226,7 @@ Top-5에서 놓친 질문 2개 (둘 다 **제2조 정의** 조항):
 - 모델 교체: 지금 기본 모델은 `gpt-5.4-mini`(.env에 LLM_MODEL이 없어 config 기본값 사용). 더 작은 후보 `gpt-5.4-nano-chat`(추천), `gpt-5-nano-chat`, `gemini-3.5-flash-lite`. `-chat` 계열을 고른 이유: 추론(reasoning) 모델은 보이지 않는 추론 토큰을 쓰고 max_tokens 처리가 달라 비용 예측이 어렵기 때문. 모델 목록은 `/models` 조회(크레딧 소모 없음)로 확인.
 - 템플릿 버그 수정: `common/ai_model.py`의 `get_llm_model(model=…)`이 인자를 무시하고 상수를 쓰던 것을 인자를 쓰도록 수정.
 - 비용 장치: ① `RAG_MAX_LLM_CALLS=N` 호출 상한(넘으면 중단) ② `.cache/usage.jsonl`에 호출별 토큰 기록, `uv run python -m rag.cache`로 요약 ③ Rerank 후보 글자 수 600→400.
+- 잔액 확인: `uv run python scripts/check_credits.py` (조회 자체는 무료, 키·계정 라벨은 출력하지 않음). 작업 전후로 실행하면 그 작업이 쓴 크레딧을 알 수 있어 추정 대신 실측으로 계획할 수 있다. (이전에는 “잔액을 볼 수 없다”고 보고 추정만 했고 실제 사용량이 추정보다 45% 많았다.)
 - 평가 방식(`eval/evaluate_answers.py`): 무료 규칙 검사(범위 밖 거절 여부, 답변이 인용한 “제N조”가 검색 결과에 있는지) + LLM 판정은 질문당 1회(정답성·근거 충실성·환각을 JSON 한 번에).
 - 주의: 모델과 글자 수가 바뀌면 이전 Rerank 결과(MRR 0.96~1.0)와 직접 비교할 수 없다. 작은 모델로 검색 평가를 한 번 다시 해서 새 기준선으로 쓴다.
 - 실행 계획(순서 고정, 예상 LLM 호출 약 75회): ① 스모크 1질문(Rerank+답변 = 2회) → 토큰 사용량 확인 ② 검색 평가 24회(Rerank 캐시가 채워짐) ③ 답변 평가(Rerank는 캐시 적중, 답변 24 + 판정 24 + 범위 밖 1).
