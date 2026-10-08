@@ -1,0 +1,25 @@
+{"id": "q01", "question": "고영향 인공지능이란 무엇인가요?", "gold_articles": ["제2조"], "type": "정의", "note": "RFP 예시 질문. 정의 조항(제2조) 검색이 핵심"}
+{"id": "q02", "question": "인공지능사업자는 누구를 말하나요?", "gold_articles": ["제2조"], "type": "정의", "note": "제2조 7호(개발사업자·이용사업자)"}
+{"id": "q03", "question": "이 법은 무엇을 위해 만들어졌나요?", "gold_articles": ["제1조"], "type": "일상어", "note": "목적 조항"}
+{"id": "q04", "question": "외국 회사가 만든 AI 서비스도 이 법의 적용을 받나요?", "gold_articles": ["제4조"], "type": "일상어", "note": "제4조 1항 국외 행위도 국내 영향 시 적용"}
+{"id": "q05", "question": "군사용이나 국가안보용 AI에도 이 법이 적용되나요?", "gold_articles": ["제4조"], "type": "일상어", "note": "제4조 2항 예외"}
+{"id": "q06", "question": "인공지능 기본계획은 몇 년마다 세우나요?", "gold_articles": ["제6조"], "type": "숫자", "note": "3년마다"}
+{"id": "q07", "question": "국가인공지능전략위원회는 어떻게 구성되나요?", "gold_articles": ["제7조"], "type": "세부", "note": "위원장 1명, 부위원장 3명 이내, 60명 이내"}
+{"id": "q08", "question": "인공지능안전연구소는 어떤 일을 하나요?", "gold_articles": ["제12조"], "type": "세부", "note": ""}
+{"id": "q09", "question": "중소기업이나 스타트업을 위한 지원이 있나요?", "gold_articles": ["제17조", "제18조"], "type": "다중조문", "note": "제17조 중소기업등 특별지원, 제18조 창업 활성화"}
+{"id": "q10", "question": "AI 학습용 데이터에 대해 정부가 하는 일은 무엇인가요?", "gold_articles": ["제15조"], "type": "세부", "note": ""}
+{"id": "q11", "question": "AI 데이터센터를 지원해주나요?", "gold_articles": ["제25조"], "type": "세부", "note": ""}
+{"id": "q12", "question": "AI 윤리원칙에는 어떤 내용이 들어가나요?", "gold_articles": ["제27조"], "type": "세부", "note": ""}
+{"id": "q13", "question": "민간에서 AI 윤리위원회를 만들 수 있나요?", "gold_articles": ["제28조"], "type": "세부", "note": "민간자율인공지능윤리위원회"}
+{"id": "q14", "question": "서비스가 AI로 운영된다는 사실을 이용자에게 미리 알려야 하나요?", "gold_articles": ["제31조"], "type": "일상어", "note": "제31조 1항 사전 고지"}
+{"id": "q15", "question": "생성형 AI로 만든 결과물에는 표시를 해야 하나요?", "gold_articles": ["제31조"], "type": "일상어", "note": "제31조 2항"}
+{"id": "q16", "question": "연산량이 아주 큰 AI 모델은 어떤 안전 의무가 있나요?", "gold_articles": ["제32조"], "type": "세부", "note": "누적 연산량 기준 이상"}
+{"id": "q17", "question": "우리 서비스가 고영향 AI에 해당하는지 어떻게 확인하나요?", "gold_articles": ["제33조"], "type": "일상어", "note": "사전 검토 및 장관 확인 요청"}
+{"id": "q18", "question": "고영향 AI를 제공하는 사업자는 어떤 안전 조치를 해야 하나요?", "gold_articles": ["제34조"], "type": "세부", "note": "위험관리방안 등"}
+{"id": "q19", "question": "고영향 AI는 기본권 영향평가를 해야 하나요?", "gold_articles": ["제35조"], "type": "일상어", "note": "노력 의무"}
+{"id": "q20", "question": "한국에 사무소가 없는 해외 AI 기업은 어떻게 해야 하나요?", "gold_articles": ["제36조"], "type": "일상어", "note": "국내대리인 지정"}
+{"id": "q21", "question": "정부가 AI 사업자를 조사할 수 있나요?", "gold_articles": ["제40조"], "type": "일상어", "note": "사실조사"}
+{"id": "q22", "question": "직무상 알게 된 비밀을 누설하면 어떤 처벌을 받나요?", "gold_articles": ["제42조"], "type": "숫자", "note": "3년 이하 징역 또는 3천만원 이하 벌금"}
+{"id": "q23", "question": "과태료는 얼마이고 어떤 경우에 부과되나요?", "gold_articles": ["제43조"], "type": "숫자", "note": "3천만원 이하, 제31·36·40조 위반"}
+{"id": "q24", "question": "고영향 AI 사업자에게는 어떤 의무들이 있나요?", "gold_articles": ["제33조", "제34조", "제35조"], "type": "다중조문", "note": "확인·책무·영향평가 모두 필요"}
+{"id": "q25", "question": "오늘 서울 날씨 알려줘", "gold_articles": [], "type": "범위밖", "note": "정답 조문 없음. 답변에서 '확인할 수 없음'이어야 함 (검색 지표에서 제외)"}
